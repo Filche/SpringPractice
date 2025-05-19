@@ -1,8 +1,10 @@
 package com.example.demo.controller;
 
 import com.example.demo.data.TacoOrder;
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.support.SessionStatus;
 
@@ -13,12 +15,14 @@ import org.springframework.web.bind.support.SessionStatus;
 public class OrderController {
 
     @GetMapping("/current")
-    public String currentOrder(){
-        return "current";
+    public String orderForm(){
+        return "orderForm";
     }
 
     @PostMapping
-    public String processOrder(TacoOrder order, SessionStatus sessionStatus){
+    public String processOrder(TacoOrder order,
+                               SessionStatus sessionStatus){
+
         log.info("Order submitted: {}", order);
         sessionStatus.setComplete();
 

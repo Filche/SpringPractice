@@ -1,5 +1,3 @@
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Два столбца равной ширины */
-  gap: 16px; /* Расстояние между блоками */
+.validationError {
+    color: red;
 }
