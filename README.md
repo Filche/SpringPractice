@@ -1,1 +1,1 @@
-#Studing project
+# Studing project

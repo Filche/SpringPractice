@@ -1,5 +1,8 @@
-package com.example.demo;
+package com.example.demo.controller;
 
+import com.example.demo.data.Ingredient;
+import com.example.demo.data.Taco;
+import com.example.demo.data.TacoOrder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,7 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.example.demo.Ingredient.Type;
+import com.example.demo.data.Ingredient.Type;
 
 @Slf4j
 @Controller
