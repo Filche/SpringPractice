@@ -3,7 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.data.Ingredient;
 import com.example.demo.data.Taco;
 import com.example.demo.data.TacoOrder;
-import com.example.demo.repository.JdbcIngredientRepository;
+import com.example.demo.repository.jdbc.JdbcIngredientRepository;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,6 @@ import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
