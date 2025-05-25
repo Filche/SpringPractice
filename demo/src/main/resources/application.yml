@@ -7,4 +7,4 @@ spring:
 
   datasource:
     generate-unique-name: false
-    name: taco?loud
+    name: tacocloud
