@@ -3,7 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.data.Ingredient;
 import com.example.demo.data.Taco;
 import com.example.demo.data.TacoOrder;
-import com.example.demo.repository.jdbc.JdbcIngredientRepository;
+import com.example.demo.repository.IngredientRepository;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,10 +23,10 @@ import com.example.demo.data.Ingredient.Type;
 @SessionAttributes("tacoOrder")
 public class DesignTacoController {
 
-    JdbcIngredientRepository ingredientRepository;
+    IngredientRepository ingredientRepository;
 
     @Autowired
-    public DesignTacoController(JdbcIngredientRepository ingredientRepository) {
+    public DesignTacoController(IngredientRepository ingredientRepository) {
         this.ingredientRepository = ingredientRepository;
     }
 

@@ -1,7 +1,7 @@
 package com.example.demo.converter;
 
 import com.example.demo.data.Ingredient;
-import com.example.demo.repository.jdbc.JdbcIngredientRepository;
+import com.example.demo.repository.IngredientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
@@ -10,10 +10,10 @@ import org.springframework.stereotype.Component;
 public class IngredientByIdConverter implements Converter<String, Ingredient> {
 
 
-    JdbcIngredientRepository ingredientRepository;
+    IngredientRepository ingredientRepository;
 
     @Autowired
-    public IngredientByIdConverter(JdbcIngredientRepository ingredientRepository) {
+    public IngredientByIdConverter(IngredientRepository ingredientRepository) {
         this.ingredientRepository = ingredientRepository;
     }
 
