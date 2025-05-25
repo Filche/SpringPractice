@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: demo
+
+  thymeleaf:
+    cache: false
+
+  datasource:
+    generate-unique-name: false
+    name: taco?loud

@@ -2,11 +2,15 @@ package com.example.demo.data;
 
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Data
-public class TacoOrder {
+public class TacoOrder implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private String deliveryName;
     private String deliveryStreet;
     private String deliveryCity;
@@ -15,6 +19,9 @@ public class TacoOrder {
     private String ccNumber;
     private String ccExpiration;
     private String ccCVV;
+
+    private long id;
+    private Date createdAt = new Date();
     private List<Taco> tacos = new ArrayList<>();
     public void addTaco(Taco taco) {
         this.tacos.add(taco);
