@@ -1,7 +1,8 @@
 package com.example.demo.data;
 
-import jakarta.persistence.*;
 import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -9,7 +10,7 @@ import java.util.Date;
 import java.util.List;
 
 @Data
-@Entity
+@Document
 public class TacoOrder implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -23,11 +24,9 @@ public class TacoOrder implements Serializable {
     private String ccCVV;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private String id;
     private Date createdAt = new Date();
 
-    @OneToMany(cascade = CascadeType.ALL)
     private List<Taco> tacos = new ArrayList<>();
     public void addTaco(Taco taco) {
         this.tacos.add(taco);
